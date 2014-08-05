@@ -45,3 +45,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/addon.d/50-minos.sh:system/addon.d/50-minos.sh \
     $(LOCAL_PATH)/bin/backuptool.functions:system/bin/backuptool.functions \
     $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
+
+# Include extra items
+include vendor/minos/configs/extras.mk
