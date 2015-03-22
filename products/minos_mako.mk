@@ -2,10 +2,10 @@
 $(call inherit-product, device/lge/mako/full_mako.mk)
 
 # Inherit common product files
-$(call inherit-product, vendor/simpleaosp/configs/common.mk)
+$(call inherit-product, vendor/minos/configs/common.mk)
 
 # Setup device specific product configuration
-PRODUCT_NAME := simpleaosp_mako
+PRODUCT_NAME := minos_mako
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := mako
 PRODUCT_MODEL := Nexus 4

@@ -1,8 +1,8 @@
 # Brand
-PRODUCT_BRAND ?= simpleaosp
+PRODUCT_BRAND ?= minos
 
 # Local path for prebuilts
-LOCAL_PATH:= vendor/simpleaosp/prebuilts/common/system
+LOCAL_PATH:= vendor/minos/prebuilts/common/system
 
 # Common build prop overrides 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -22,7 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.use_intro_anim=false
 
 # Common overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/simpleaosp/overlays/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/minos/overlays/common
 
 # Needed Packages
 PRODUCT_PACKAGES += Launcher3
@@ -42,10 +42,6 @@ PRODUCT_COPY_FILES += \
 
 # Backuptool support
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/addon.d/50-simpleaosp.sh:system/addon.d/50-simpleaosp.sh \
+    $(LOCAL_PATH)/addon.d/50-minos.sh:system/addon.d/50-minos.sh \
     $(LOCAL_PATH)/bin/backuptool.functions:system/bin/backuptool.functions \
     $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
-
-# Bootanimation support
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
