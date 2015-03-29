@@ -14,5 +14,5 @@ PRODUCT_MANUFACTURER := LGE
 # Build prop fingerprint overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_NAME="occam" \
-BUILD_FINGERPRINT="google/occam/mako:5.1/LMY47D/1743759:user/release-keys" \
-PRIVATE_BUILD_DESC="occam-user 5.1 LMY47D 1743759 release-keys"
+BUILD_FINGERPRINT="google/occam/mako:5.1/LMY47I/1767468:user/release-keys" \
+PRIVATE_BUILD_DESC="occam-user 5.1 LMY47I 1767468 release-keys"
