@@ -24,6 +24,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/minos/overlays/common
 
+# Common packages
++PRODUCT_PACKAGES += \
+    busybox \
+    static_busybox \
+    unrar \
+    zip
+
 # Needed Packages
 PRODUCT_PACKAGES += Launcher3
 
