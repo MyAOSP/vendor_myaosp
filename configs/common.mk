@@ -1,10 +1,15 @@
 # Brand
-PRODUCT_BRAND ?= minos
+PRODUCT_BRAND ?= myaosp
+
+PRODUCT_VERSION_NICK = lp
+PRODUCT_VERSION_MAJOR = 5.1.1
+
+MYAOSP_VERSION := $(PRODUCT_VERSION_NICK)-$(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)
 
 # Local path for prebuilts
-LOCAL_PATH:= vendor/minos/prebuilts/common/system
+LOCAL_PATH:= vendor/myaosp/prebuilts/common/system
 
-# Common build prop overrides 
+# Common build prop overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -22,7 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.facelock.use_intro_anim=false
 
 # Common overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/minos/overlays/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/myaosp/overlays/common
 
 # Common packages
 +PRODUCT_PACKAGES += \
@@ -31,8 +36,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/minos/overlays/common
     unrar \
     zip
 
-# Needed Packages
-PRODUCT_PACKAGES += Launcher3
+# Supersu
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    $(LOCAL_PATH)/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Proprietary latinime lib needed for swyping
 PRODUCT_COPY_FILES += \
@@ -49,9 +56,9 @@ PRODUCT_COPY_FILES += \
 
 # Backuptool support
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/addon.d/50-minos.sh:system/addon.d/50-minos.sh \
+    $(LOCAL_PATH)/addon.d/50-myaosp.sh:system/addon.d/50-myaosp.sh \
     $(LOCAL_PATH)/bin/backuptool.functions:system/bin/backuptool.functions \
     $(LOCAL_PATH)/bin/backuptool.sh:system/bin/backuptool.sh
 
 # Include extra items
-include vendor/minos/configs/extras.mk
+include vendor/myaosp/configs/extras.mk
